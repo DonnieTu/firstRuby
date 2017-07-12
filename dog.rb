@@ -1,4 +1,4 @@
-class Dog
+class Animal
     attr_reader :name,:age
     def name=(value) 
         if value==''
@@ -19,17 +19,37 @@ class Dog
     end
 
     def talk
-        puts "#{@name} says Bark!"
+        puts "#{@name} talks!"
     end
 
     def report_age
         puts ("#{name} is #{@age} years old")
     end
+
+    def to_s
+        "the anmimal #{methods}"
+    end
 end
 
-dog=Dog.new
-dog.name="Daisy"
-dog.age=3
-dog.report_age
-dog.talk
-dog.move("bed")
+class Dog < Animal
+    def talk
+        puts "#{@name} says Bark!"
+    end
+
+end
+
+class Armadillo <Animal
+    def move (destination)
+        puts "#{@name} unrolls!"
+        super
+    end
+end
+
+armadillo=Armadillo.new
+armadillo.name="Daisy"
+armadillo.age=3
+armadillo.report_age
+armadillo.talk
+armadillo.move("bed")
+#puts armadillo.to_s
+puts armadillo.class
