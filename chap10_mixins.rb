@@ -22,3 +22,23 @@ second.grade="Choice"
 if first > second
     puts "Select #{first.inspect}."
 end
+
+class WordSplitter
+    attr_accessor :string
+    def each 
+        string.split(" ").each do |word|
+            yield word
+        end
+    end
+
+    include Enumerable
+end
+
+w=WordSplitter.new
+w.string="one two three"
+p w.find_all {|word| word.include?("o")}
+p w.find_all {|word| word.include?("one")}
+p w.map {|word| word.capitalize}
+p w.find {|word| word.include?("o")}
+p w.group_by {|word| word.include?("o")}
+p w.max_by {|word| word.length}
