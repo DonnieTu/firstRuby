@@ -23,8 +23,13 @@ if first > second
     puts "Select #{first.inspect}."
 end
 
+# This class allows you to perform varous operation on the works in a string
 class WordSplitter
+    # the string to split into words
     attr_accessor :string
+
+    # Passes each word in the stirng to a block, one 
+    # at a time.
     def each 
         string.split(" ").each do |word|
             yield word
