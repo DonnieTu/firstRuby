@@ -1,0 +1,9 @@
+---
+Jaws: !ruby/object:Movie
+  title: Jaws
+  director: Hayao
+  year: 2001
+Alien: !ruby/object:Movie
+  title: Alien
+  director: Christoper
+  year: 2002
