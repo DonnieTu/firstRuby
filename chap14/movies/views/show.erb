@@ -1,0 +1,25 @@
+<!DOCTYPE　ＨＴＭＬ>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <title>My Movies - <%= @movie.title %> </title>
+    </head>
+    <body>
+        <h1><%= @movie.title %></h1>
+            <table>
+            <tr>
+                <td><label for="title">Title:</label></td>
+                <td> <%= @movie.title%> </td>
+            </tr>
+            <tr>
+                <td><label for="director">Director:</label></td>
+                <td><%= @movie.director %> </td>
+            </tr>
+            <tr>
+                <td><label for="year">Year Published:</label></td>
+                <td> <%= @movie.year %> </td>
+            </tr>
+            </table>
+        <a href="/movies">Back to Index</a>
+    </body>
+</html>
